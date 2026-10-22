@@ -100,6 +100,10 @@ h1 em, h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; 
 .ship .bp-nozzle { fill: #141417 !important; stroke: var(--red); stroke-width: 1.4; }
 .ship .bp-tip { fill: var(--red) !important; stroke: none; }
 .ship .bp-stripe { stroke: var(--red); stroke-width: 3; }
+.ship .bp-port { fill: #0b0b0d !important; stroke: rgba(255,255,255,.7); stroke-width: 2; }
+.ship .bp-ring { stroke: var(--red); stroke-width: 7; stroke-dasharray: 13.9 13.9; filter: drop-shadow(0 0 6px rgba(253,6,6,.6)); } /* porthole = poker chip edge */
+.ship .bp-tip { filter: drop-shadow(0 0 10px rgba(253,6,6,.75)); }
+.nose { filter: drop-shadow(0 0 32px rgba(253,6,6,.28)); }
 .ship .flame { stroke: none; }
 .ship path.flame { fill: url(#flameH); }
 .ship svg.v path.flame { fill: url(#flameV); }
@@ -107,8 +111,9 @@ h1 em, h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; 
 .ship .speed { stroke: rgba(255,255,255,.18); stroke-width: 1; stroke-dasharray: 60 30; }
 
 /* Horizontal on desktop: engine | hull (Academy, passerelle, Elite) | nose. The SVG ends are 340px tall, the hull 260px. */
-.ship { position: relative; display: grid; grid-template-columns: 150px 1fr 200px; align-items: center; width: min(1360px, 100% - 150px); margin: 0 16px 0 auto; }
+.ship { position: relative; display: grid; grid-template-columns: 150px 1fr 264px; align-items: center; width: min(1360px, 100% - 150px); margin: 0 16px 0 auto; }
 @media (min-width: 1520px) { .ship { margin-right: auto; transform: translateX(40px); } }
+@media (min-width: 1301px) and (max-width: 1440px) { .ship { width: calc(100% - 80px); } .tile b { font-size: 14px; } }
 .engine, .nose { height: 420px; position: relative; z-index: 1; }
 .engine svg, .nose svg { height: 100%; width: auto; overflow: visible; display: block; }
 .ship svg.v { display: none; }
@@ -518,3 +523,13 @@ body.room-open .room { opacity: 1; pointer-events: auto; transform: translate(-5
 .table-wrap { padding-left: 44px; padding-right: 44px; }
 @media (max-width: 760px) { .table-wrap { padding-left: 30px; padding-right: 30px; } }
 .room.bio .room-photo img { object-position: center 25%; }
+
+/* ============ Poker touches (suits) ============ */
+.eyebrow .suit { display: inline-block; margin-right: 10px; letter-spacing: 0; color: var(--text); opacity: .75; font-family: "Apple Symbols", "Segoe UI Symbol", sans-serif; }
+.eyebrow .suit.red { color: var(--red); opacity: 1; }
+.eyebrow .sep { letter-spacing: 0; margin: 0 6px; color: var(--text); opacity: .75; }
+.act { position: relative; }
+.act::after { content: attr(data-suit); position: absolute; top: 14px; right: 0; font-size: 44px; line-height: 1; color: rgba(255,255,255,.06); pointer-events: none; font-family: "Apple Symbols", "Segoe UI Symbol", sans-serif; }
+.act:nth-child(2)::after, .act:nth-child(3)::after { color: rgba(253,6,6,.14); }
+.footer .suits { letter-spacing: .4em; color: rgba(255,255,255,.5); }
+.footer .suits i { font-style: normal; color: var(--red); }

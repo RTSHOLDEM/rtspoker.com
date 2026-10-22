@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RTS | Ne ratez pas le décollage · Recrutement 2027</title>
+  <meta name="description" content="RTS, agence de joueurs de poker professionnels. RTS Academy pour passer pro en une année, RTS Elite pour les joueurs déjà pro. Candidatures 2027 ouvertes jusqu'au 22 novembre.">
+  <meta property="og:title" content="RTS | Ne ratez pas le décollage">
+  <meta property="og:description" content="Rejoignez l'élite du poker français. Candidatures 2027 ouvertes jusqu'au 22 novembre.">
+  <meta property="og:image" content="img/seminaire.webp">
+  <link rel="icon" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2026-10-22e">
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav">
+  <div class="wrap">
+    <a class="nav-logo" href="#top" aria-label="RTS Poker"><img src="img/logo.svg" alt="RTS"></a>
+    <nav class="nav-links">
+      <a href="#fusee">La fusée</a>
+      <a href="#structure">La saison</a>
+      <a href="#resultats">Résultats</a>
+      <a href="#equipe">L'équipe</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-red btn-sm" href="#candidater">Candidater</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO : titre, compte à rebours, fusée (plan), bouton ============
+     Fully centered. The rocket is a static blueprint: each compartment is a <button class="cell" data-room="ID">
+     that opens the matching <template class="room-tpl" data-id="ID"> in the centered room. -->
+<section class="hero" id="fusee">
+  <div class="wrap center">
+    <p class="eyebrow">Agence de joueurs de poker · Recrutement 2027</p>
+    <h1>Ne ratez pas<br>le <em>décollage</em></h1>
+    <p class="hero-sub">Rejoignez l'élite du poker français.</p>
+
+    <div class="countdown" data-countdown>
+      <p class="cd-label">Clôture des candidatures 2027 dans</p>
+      <div class="cd-grid">
+        <div><b data-d>00</b><span>jours</span></div>
+        <div><b data-h>00</b><span>heures</span></div>
+        <div><b data-m>00</b><span>min</span></div>
+        <div><b data-s>00</b><span>sec</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rocket = static plan, read left to right: engine, stage 1 Academy, passerelle, stage 2 Elite, nose.
+       Phone: same blocks stacked upright (nose on top). Each tile = <button data-room="ID"> that opens its room. -->
+  <div class="bp-wrap">
+    <div class="ship">
+      <div class="engine">
+        <svg class="h" viewBox="0 0 150 420" aria-hidden="true">
+          <defs><linearGradient id="flameH" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#fff2e0"/><stop offset=".18" stop-color="#ff4a1f"/><stop offset=".6" stop-color="#ff1a0a" stop-opacity=".55"/><stop offset="1" stop-color="#ff0000" stop-opacity="0"/></linearGradient></defs>
+          <path class="speed" d="M-20 120 H-220 M-40 300 H-260 M-10 210 H-120 M-60 80 H-180 M-60 340 H-160"/>
+          <path class="flame" d="M110 108 L58 136 L72 152 L-6 170 L22 192 L-70 210 L22 228 L-6 250 L72 268 L58 284 L110 312 Z" fill="url(#flameH)"/>
+          <path class="core" d="M110 156 L76 176 L84 190 L36 210 L84 230 L76 244 L110 264 Z"/>
+          <path class="bp-fin" d="M340 50 L150 50 L36 2 L126 2 Z M340 370 L150 370 L36 418 L126 418 Z"/>
+          <path class="bp-nozzle" d="M150 118 L150 302 L110 334 L110 86 Z"/>
+        </svg>
+        <svg class="v" viewBox="0 0 420 150" aria-hidden="true">
+          <defs><linearGradient id="flameV" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff2e0"/><stop offset=".18" stop-color="#ff4a1f"/><stop offset=".6" stop-color="#ff1a0a" stop-opacity=".55"/><stop offset="1" stop-color="#ff0000" stop-opacity="0"/></linearGradient></defs>
+          <path class="flame" d="M108 40 L136 92 L152 78 L170 156 L192 128 L210 220 L228 128 L250 156 L268 78 L284 92 L312 40 Z" fill="url(#flameV)"/>
+          <path class="core" d="M156 40 L176 74 L190 66 L210 114 L230 66 L244 74 L264 40 Z"/>
+          <path class="bp-fin" d="M50 -190 L50 0 L2 114 L2 24 Z M370 -190 L370 0 L418 114 L418 24 Z"/>
+          <path class="bp-nozzle" d="M118 0 L302 0 L334 40 L86 40 Z"/>
+        </svg>
+      </div>
+      <div class="hull">
+        <div class="stage academy">
+          <button class="stage-h" data-room="academy"><span>Étage 1</span><strong>RTS Academy</strong><small>Devenir pro en un an</small><i>+</i></button>
+          <div class="tiles">
+            <button class="tile" data-room="a-coaching"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><b>Coachings hebdomadaires</b><i>+</i></button>
+            <button class="tile" data-room="a-mentor"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 6 2 6 5.5"/></svg><b>Votre mentor dédié</b><i>+</i></button>
+            <button class="tile" data-room="a-structure"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><b>Formation structurée</b><i>+</i></button>
+            <button class="tile" data-room="a-discord"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg><b>Le Discord</b><i>+</i></button>
+            <button class="tile" data-room="a-events"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.5 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg><b>Séminaires</b><i>+</i></button>
+          </div>
+        </div>
+        <button class="tile bridge" data-room="passerelle" aria-label="La passerelle : de la RTS Academy à la RTS Elite"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg><b>Passerelle</b><small><span class="long">Academy </span>→ Elite</small><i>+</i></button>
+        <div class="stage elite">
+          <button class="stage-h" data-room="elite"><span>Étage 2</span><strong>RTS Elite</strong><small>Les joueurs déjà pro</small><i>+</i></button>
+          <div class="tiles">
+            <button class="tile" data-room="e-coaching"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".8"/></svg><b>Coaching</b><i>+</i></button>
+            <button class="tile" data-room="e-transmettre"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg><b>Transmettre</b><i>+</i></button>
+            <button class="tile" data-room="e-image"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><circle cx="12" cy="13.5" r="3.5"/><path d="M9 7l1.5-3h3L15 7"/></svg><b>Votre image</b><i>+</i></button>
+            <button class="tile" data-room="e-wealth"><svg viewBox="0 0 24 24"><path d="M3 20h18M5 16l5-5 4 3 6-7"/><path d="M15 7h5v5"/></svg><b>RTS Wealth</b><i>+</i></button>
+          </div>
+        </div>
+      </div>
+      <div class="nose">
+        <svg class="h" viewBox="0 0 200 420" aria-hidden="true"><path class="bp-hull" d="M0 50 C90 50 160 120 200 210 C160 300 90 370 0 370 Z"/><path class="bp-tip" d="M138 136 C166 164 186 188 200 210 C186 232 166 256 138 284 C152 258 158 234 158 210 C158 186 152 162 138 136 Z"/><path class="bp-stripe" d="M14 52 V368"/><image href="img/logo.svg" x="34" y="197" width="74" height="25"/></svg>
+        <svg class="v" viewBox="0 0 420 200" aria-hidden="true"><path class="bp-hull" d="M50 200 C50 110 120 40 210 0 C300 40 370 110 370 200 Z"/><path class="bp-tip" d="M136 62 C164 34 188 14 210 0 C232 14 256 34 284 62 C258 48 234 42 210 42 C186 42 162 48 136 62 Z"/><path class="bp-stripe" d="M52 186 H368"/><image href="img/logo.svg" x="173" y="128" width="74" height="25"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap center">
+    <p class="bp-hint">Cliquez sur chaque compartiment pour en savoir plus.</p>
+    <a class="btn btn-red" href="#candidater">Candidater</a>
+    <div class="facts">
+      <div><strong>4 saisons</strong><span>d'un programme éprouvé</span></div>
+      <div><strong>+2 M€</strong><span>de gains cumulés en cash game</span></div>
+      <div><strong>+10 joueurs</strong><span>jouent activement en NL1000 et plus</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LES SALLES DE LA FUSÉE ============
+     One <template class="room-tpl"> per compartment, in reading order (the room arrows follow this order).
+     data-img = photo shown on top. Missing file = elegant placeholder. Photos go in img/fusee/<id>.webp -->
+<div hidden>
+<template class="room-tpl" data-id="academy" data-img="img/fusee/academy.webp">
+  <p class="r-tag">Étage 1 · RTS Academy</p>
+  <h3 class="r-title">Passer pro en une année</h3>
+  <p>Pour les joueurs qui jouent autour de la NL100 et qui veulent devenir professionnels dans l'année. Un programme d'un an, au moins 35 heures par semaine, au sein d'une équipe qui vise les plus hautes limites.</p>
+</template>
+<template class="room-tpl" data-id="a-coaching" data-img="img/fusee/a-coaching.webp">
+  <p class="r-tag">RTS Academy · Coachings</p>
+  <h3 class="r-title">Des coachings chaque semaine</h3>
+  <p>En petits groupes, face aux joueurs récréatifs et face aux réguliers. Un fil directeur sur toute l'année, construit par les coachs.</p>
+  <p class="r-hint">Cliquez sur un coach pour découvrir son parcours.</p>
+  <div class="r-faces"><button class="face" data-person="Enzo"><img src="img/equipe-enzo.webp" alt=""><span>Enzo</span></button><button class="face" data-person="Adrien"><img src="img/equipe-adrien.webp" alt=""><span>Adrien</span></button><button class="face" data-person="Alexandre"><img src="img/equipe-alexandre.webp" alt=""><span>Alexandre</span></button></div>
+</template>
+<template class="room-tpl" data-id="a-mentor" data-img="img/fusee/a-mentor.webp">
+  <p class="r-tag">RTS Academy · Mentorat</p>
+  <h3 class="r-title">Votre mentor dédié</h3>
+  <p>Chaque joueur est suivi par son propre mentor, un joueur de la RTS Elite qui a déjà accompli ce que vous voulez accomplir. Une vraie relation se crée avec un joueur plus expérimenté : il connaît le chemin parce qu'il l'a déjà parcouru, et il vous aide à atteindre vos objectifs.</p>
+  <p>Il répond à vos mains sur le Discord et fait un bilan avec vous chaque mois.</p>
+  <p class="r-hint">Cliquez sur un mentor pour découvrir son parcours.</p>
+  <div class="r-faces"><button class="face" data-person="Anto"><img src="img/equipe-anthony.webp" alt=""><span>Anto</span></button><button class="face" data-person="Thibaud"><img src="img/equipe-thibaud.webp" alt=""><span>Thibaud</span></button><button class="face" data-person="Matteo"><img src="img/equipe-matteo.webp" alt=""><span>Matteo</span></button><button class="face" data-person="Mentor 2027" data-kind="mentor" data-role="Promotion RTS 2027" data-tags="Team RTS Elite" data-bio="De nouveaux mentors pour 2027, issus des meilleurs talents de la RTS Academy, seront dévoilés prochainement."><img src="img/equipe-photo-a-venir.webp" alt=""><span>Mentor 2027</span></button></div>
+</template>
+<template class="room-tpl" data-id="a-structure" data-img="img/fusee/a-structure.webp">
+  <p class="r-tag">RTS Academy · Formation structurée</p>
+  <h3 class="r-title">Une formation structurée</h3>
+  <p>L'année est découpée en trimestres et en mois. D'un côté, nous fixons avec vous vos objectifs de l'année, de chaque trimestre et de chaque mois : la structure dont a besoin un joueur professionnel.</p>
+  <p>De l'autre, la formation suit la même structure : un acte par trimestre, un thème par mois sur chaque piste de coaching.</p>
+  <div class="r-steps"><span>Année</span><i></i><span>Trimestre</span><i></i><span>Mois</span></div>
+  <a class="r-link" href="#structure" data-close>Voir la saison en détail</a>
+</template>
+<template class="room-tpl" data-id="a-discord" data-img="img/fusee/a-discord.webp">
+  <p class="r-tag">RTS Academy · Communauté</p>
+  <h3 class="r-title">Le QG de la RTS</h3>
+  <p>Le Discord est le quartier général de la RTS. C'est là que tout se passe, tous les jours : vous postez vos mains, posez vos questions et échangez avec les autres joueurs, les mentors et les coachs.</p>
+  <p>Vous y apprenez énormément, et vous ne grindez plus jamais seul.</p>
+</template>
+<template class="room-tpl" data-id="a-events" data-img="img/seminaire-casquette.webp">
+  <p class="r-tag">RTS Academy · Événements</p>
+  <h3 class="r-title">Séminaires et contests</h3>
+  <p>Séminaire de lancement en janvier, séminaire d'été, une conférence chaque mois, des contests par équipes au printemps, en été et en hiver, et le Player of the Month.</p>
+</template>
+<template class="room-tpl" data-id="passerelle" data-img="img/fusee/passerelle.webp">
+  <p class="r-tag">Passerelle</p>
+  <h3 class="r-title">De la RTS Academy à la RTS Elite</h3>
+  <p>Vous montez vite ? Pas besoin d'attendre la saison suivante. Les joueurs de l'Academy qui grimpent rapidement, notamment en atteignant la NL1000 (5/10), peuvent rejoindre la RTS Elite en cours d'année. La décision revient au head coach, au manager de la RTS Academy et au manager de la RTS Elite.</p>
+</template>
+<template class="room-tpl" data-id="elite" data-img="img/fusee/elite.webp">
+  <p class="r-tag">Étage 2 · RTS Elite</p>
+  <h3 class="r-title">Le cercle des joueurs pro</h3>
+  <p>Des joueurs déjà professionnels, jusqu'en NL2000. La plupart sont passés par la RTS Academy et ont signé à nouveau pour continuer à évoluer dans la structure.</p>
+  <p class="r-note"><strong>Vous jouez déjà la NL500, la NL1000 ou la NL2000 ?</strong> Nous ne recrutons pas activement pour la RTS Elite, mais il nous arrive d'ouvrir une place à un joueur prometteur. Contactez Alex sur <a href="https://www.instagram.com/alexislahire/" target="_blank" rel="noopener">Instagram</a>.</p>
+</template>
+<template class="room-tpl" data-id="e-coaching" data-img="img/fusee/e-coaching.webp">
+  <p class="r-tag">RTS Elite · Coaching</p>
+  <h3 class="r-title">Des coachs plus expérimentés</h3>
+  <p>Des coachings chaque semaine avec des coachs plus expérimentés, joueurs des plus grosses limites.</p>
+  <p class="r-hint">Cliquez sur un coach pour découvrir son parcours.</p>
+  <div class="r-faces"><button class="face" data-person="Alex"><img src="img/fondateur.webp" alt=""><span>Alex</span></button><button class="face" data-person="Adrien"><img src="img/equipe-adrien.webp" alt=""><span>Adrien</span></button><button class="face" data-person="Quentin"><img src="img/equipe-quentin.webp" alt=""><span>Quentin</span></button><button class="face" data-person="Alexandre"><img src="img/equipe-alexandre.webp" alt=""><span>Alexandre</span></button></div>
+</template>
+<template class="room-tpl" data-id="e-transmettre" data-img="img/fusee/e-transmettre.webp">
+  <p class="r-tag">RTS Elite · Transmettre</p>
+  <h3 class="r-title">Devenir mentor, devenir coach</h3>
+  <p>Nos mentors sont des joueurs de la RTS Elite. Les meilleurs profils peuvent aussi rejoindre l'équipe de coachs.</p>
+</template>
+<template class="room-tpl" data-id="e-image" data-img="img/fusee/e-image.webp">
+  <p class="r-tag">RTS Elite · Image</p>
+  <h3 class="r-title">Développer votre image</h3>
+  <p>Des conseils en création de contenu pour construire votre image et développer vos réseaux sociaux.</p>
+</template>
+<template class="room-tpl" data-id="e-wealth" data-img="img/fusee/e-wealth.webp">
+  <p class="r-tag">RTS Elite · RTS Wealth</p>
+  <h3 class="r-title">Faire fructifier vos gains</h3>
+  <p>Avec nos partenaires financiers : des solutions pour investir vos gains, l'accès à la banque privée et au crédit, un levier difficile à obtenir quand on est joueur de poker.</p>
+</template>
+</div>
+
+<!-- ============ UN PROGRAMME QUI A FAIT SES PREUVES ============ -->
+<section class="section" id="preuves">
+  <div class="wrap">
+    <div class="head center">
+      <p class="eyebrow">Depuis 2022</p>
+      <h2>Un programme qui a<br>fait ses <em>preuves</em></h2>
+      <p class="lead">Rejoignez un programme qui a fait ses preuves et qui a envoyé plusieurs aspirants joueurs de poker en hautes limites.</p>
+    </div>
+    <div class="video">
+      <iframe src="https://www.youtube-nocookie.com/embed/U8B3KaKYEY0" title="Séminaire RTS" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LA SAISON (RTS Academy) ============
+     The 4 acts come from Notion "Programme 2027 · Academy". Update there first, then here.
+     The Elite season stays private (Alexis, 2026-10-20). -->
+<section class="section" id="structure">
+  <div class="wrap">
+    <div class="head center">
+      <p class="eyebrow">RTS Academy · une structure de professionnel</p>
+      <h2>Une saison, quatre actes</h2>
+      <p class="lead">Des objectifs fixés pour l'année, chaque trimestre et chaque mois. Un thème par mois sur chaque piste de coaching. Le décollage a lieu au séminaire de janvier.</p>
+    </div>
+    <div class="cadence">
+      <div><span class="c-k">Chaque année</span><strong>Vos objectifs de saison</strong><p>Fixés ensemble au lancement.</p></div>
+      <div><span class="c-k">Chaque trimestre</span><strong>Un acte, un cap</strong><p>Un point d'étape avec votre mentor.</p></div>
+      <div><span class="c-k">Chaque mois</span><strong>Le bilan</strong><p>Bilan mentor, conférence et Player of the Month.</p></div>
+    </div>
+    <div class="acts">
+      <div class="act"><p class="act-n">Acte 1 · Janvier à mars</p><h3>Les fondations</h3><ul><li><b>vs récréatifs</b>Les fondamentaux du jeu exploitant</li><li><b>vs réguliers</b>Les grandes lignes théoriques du SRP</li></ul><p class="act-ev">Séminaire de lancement</p></div>
+      <div class="act"><p class="act-n">Acte 2 · Avril à juin</p><h3>Value et pots 3-bet</h3><ul><li><b>vs récréatifs</b>La value et le jeu multiway</li><li><b>vs réguliers</b>Mapper le jeu en pot 3-bet</li></ul><p class="act-ev">Spring Contest</p></div>
+      <div class="act"><p class="act-n">Acte 3 · Juillet à septembre</p><h3>Exploitation avancée</h3><ul><li><b>vs récréatifs</b>Stratégies d'exploitation avancées</li><li><b>vs réguliers</b>La défense</li></ul><p class="act-ev">Séminaire d'été · Summer Contest</p></div>
+      <div class="act"><p class="act-n">Acte 4 · Octobre à décembre</p><h3>Le jeu complexe</h3><ul><li><b>vs récréatifs</b>Défense et adaptations complexes</li><li><b>vs réguliers</b>Early, probe et delayed</li></ul><p class="act-ev">Winter Contest · Bilan de saison</p></div>
+    </div>
+    <div class="elite-season">
+      <span class="lock" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
+      <div><strong>Et la RTS Elite ?</strong><p>La RTS Elite a sa propre saison, avec ses objectifs et son suivi. Son contenu reste réservé à ses joueurs.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RÉSULTATS : un joueur à la fois, l'avant puis l'après ============
+     One <article class="slide"> per player (Gerbert, Thibaud, Faycal, Abraham). Graphs: img/resultat-N-avant.webp and img/resultat-N-apres.webp.
+     Slide with class "pending" = curves not received yet (hides the lightning button). Testimonial: <blockquote class="res-quote">, real quote only. -->
+<section class="section" id="resultats">
+  <div class="wrap">
+    <div class="head center">
+      <p class="eyebrow">Résultats</p>
+      <h2>Avant RTS. Après RTS.</h2>
+      <p class="lead">Quatre trajectoires parmi beaucoup d'autres. Les courbes sont en cours de mise à jour : elles arrivent très bientôt.</p>
+    </div>
+
+    <div class="res" id="res">
+      <article class="slide pending active">
+        <header><div><h3>Gerbert</h3><p class="res-tag">Promotion 2025</p></div><p class="jump"><span>NL100</span><i>→</i><strong>NL2000</strong></p></header>
+        <div class="gbox">
+          <div class="g before empty"><span>Courbe en cours de mise à jour</span></div>
+          <div class="g after empty"><span>Courbe en cours de mise à jour</span></div>
+        </div>
+        <blockquote class="res-quote empty">Témoignage à venir</blockquote>
+      </article>
+      <article class="slide pending">
+        <header><div><h3>Thibaud</h3><p class="res-tag">Promotion 2025</p></div><p class="jump"><span>NL100</span><i>→</i><strong>NL2000</strong></p></header>
+        <div class="gbox">
+          <div class="g before empty"><span>Courbe en cours de mise à jour</span></div>
+          <div class="g after empty"><span>Courbe en cours de mise à jour</span></div>
+        </div>
+        <blockquote class="res-quote empty">Témoignage à venir</blockquote>
+      </article>
+      <article class="slide pending">
+        <header><div><h3>Faycal</h3><p class="res-tag">Promotion 2026</p></div></header>
+        <div class="gbox">
+          <div class="g before empty"><span>Courbe en cours de mise à jour</span></div>
+          <div class="g after empty"><span>Courbe en cours de mise à jour</span></div>
+        </div>
+        <blockquote class="res-quote empty">Témoignage à venir</blockquote>
+      </article>
+      <article class="slide pending">
+        <header><div><h3>Abraham</h3><p class="res-tag">Promotion 2026</p></div><p class="jump"><span>NL100</span><i>→</i><strong>NL1000</strong></p></header>
+        <div class="gbox">
+          <div class="g before empty"><span>Courbe en cours de mise à jour</span></div>
+          <div class="g after empty"><span>Courbe en cours de mise à jour</span></div>
+        </div>
+        <blockquote class="res-quote empty">Témoignage à venir</blockquote>
+      </article>
+
+      <!-- shared controls: main.js moves them into the visible graph -->
+      <div class="gctrl">
+      <div class="state"><span class="st-before">Avant RTS</span><span class="st-after">Après RTS</span></div>
+      <svg class="bolt" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M58 0 L40 38 L56 40 L34 100 L72 30 L54 28 L70 0"/></svg>
+      <div class="flash" aria-hidden="true"></div>
+      <button class="reveal" type="button"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg><span class="rv-1">Cliquez pour voir l'après</span><span class="rv-2">Revoir l'avant</span></button>
+      </div>
+    </div>
+    <div class="res-nav">
+      <button class="arrow" data-step="-1" aria-label="Joueur précédent">←</button>
+      <span class="res-count"><b>1</b> / 4</span>
+      <button class="arrow" data-step="1" aria-label="Joueur suivant">→</button>
+    </div>
+    <p class="res-more">Et bien d'autres. Nous n'en montrons que quelques-uns.</p>
+  </div>
+</section>
+
+<!-- ============ L'ÉQUIPE : autour de la table ============
+     The staff only (5 coachs, 4 mentors, Mehdi) at a 10-max table. One <button class="seat KIND"> per person
+     (KIND = staff | coach | mentor). main.js places seats and their hole cards around the table; click = bio.
+     Photo: img/team-<firstname>.webp, portrait 3:4, face centered. -->
+<section class="section" id="equipe">
+  <div class="wrap">
+    <div class="head center">
+      <p class="eyebrow">L'équipe</p>
+      <h2>Autour de la <em>table</em></h2>
+      <p class="lead">Les coachs, les mentors et le staff qui accompagnent nos joueurs. Cliquez sur chacun pour découvrir son parcours.</p>
+    </div>
+    <div class="table-wrap">
+      <div class="ptable" id="ptable">
+        <div class="rail"><div class="felt"><span class="betline"></span><img src="img/logo.svg" alt="RTS"><p>Saison 2027</p><span class="dealer">D</span></div></div>
+        <button class="seat coach" data-name="Alex" data-kind="coach" data-role="Fondateur · Coach" data-tags="Elite" data-bio="Voilà maintenant plus de 5 ans que j&#x27;évolue sur les plus hautes limites du .fr (5/10 et 10/20), et depuis 3 ans sur le .com jusqu&#x27;en 25/50. En travaillant avec plusieurs mentors, j&#x27;ai découvert la clé pour progresser rapidement en high stakes : s&#x27;entourer de joueurs plus compétents, échanger régulièrement avec eux, et absorber chaque parcelle de leur savoir.
+
+Être joueur professionnel de poker en ligne offre une liberté et un style de vie uniques, mais c&#x27;est aussi une expérience souvent solitaire. C&#x27;est pour combler ce besoin de partage et de progression collective que j&#x27;ai créé la Team RTS en septembre 2022.
+
+L&#x27;objectif de RTS est de transmettre mes stratégies axées sur une approche « redline » : pas simplement un jeu agressif, mais une méthode fondée sur une compréhension profonde du GTO, de ses applications concrètes, et de la gestion stratégique de votre carrière de joueur professionnel."><img src="img/fondateur.webp" alt=""><span class="plate"><b>Alex</b><small>Coach</small></span></button>
+        <button class="seat coach" data-name="Enzo" data-kind="coach" data-role="Coach · Manager de la RTS Academy" data-tags="Academy" data-bio="Le poker a toujours fait partie de mon environnement. Issu d&#x27;une famille italienne où les parties étaient fréquentes, j&#x27;ai découvert très tôt ce jeu qui allait devenir bien plus qu&#x27;un simple loisir.
+
+J&#x27;ai commencé en NL5 avant de gravir progressivement les limites jusqu&#x27;à évoluer aujourd&#x27;hui principalement entre la NL200, la NL500 et la NL1000.
+
+Le véritable tournant de ma carrière a été ma rencontre avec Alex et RTS. J&#x27;ai rejoint la Saison 1 en tant qu&#x27;élève, avec déjà de bonnes bases mais encore besoin d&#x27;un cadre pour franchir un cap. Quelques années plus tard, je suis passé d&#x27;élève à coach au sein de RTS.
+
+Aujourd&#x27;hui, je suis le manager de la RTS Academy : je pilote le programme, les séminaires et le suivi des joueurs tout au long de la saison. En coaching, j&#x27;accompagne les joueurs principalement sur le jeu contre les récréatifs, les adaptations exploitantes et le jeu en multiway. Mon objectif est de leur transmettre des raisonnements solides, une vraie méthode de travail et davantage d&#x27;autonomie dans leur progression.
+
+J&#x27;accorde aussi une place importante à tout ce qui entoure la performance : sport, discipline, équilibre de vie et capacité à performer sur la durée.
+
+Je poursuis en parallèle ma propre carrière de joueur avec la même ambition qu&#x27;à mes débuts : continuer à progresser, monter les limites et transmettre cette exigence aux joueurs que j&#x27;accompagne chez RTS."><img src="img/equipe-enzo.webp" alt=""><span class="plate"><b>Enzo</b><small>Coach</small></span></button>
+        <button class="seat coach" data-name="Adrien" data-kind="coach" data-role="Coach" data-tags="Academy,Elite" data-bio="Moi, c&#x27;est Adrien, j&#x27;ai 27 ans et je suis joueur de poker professionnel depuis 4 ans. J&#x27;évolue aujourd&#x27;hui sur les plus hautes limites du .fr, de la NL500 à la NL2000.
+
+Coach chez RTS, alias « L&#x27;usine à crushers », depuis 2 ans, je m&#x27;engage à vous transmettre toute mon expérience, mes connaissances et mes méthodes de travail pour vous donner les armes nécessaires afin de franchir un cap dans votre jeu, gagner en autonomie et vous installer durablement sur les plus hautes limites du .fr. Mon objectif : vous accompagner vers votre plein potentiel et vous permettre de viser encore plus haut !"><img src="img/equipe-adrien.webp" alt=""><span class="plate"><b>Adrien</b><small>Coach</small></span></button>
+        <button class="seat coach" data-name="Alexandre" data-kind="coach" data-role="Coach" data-tags="Academy,Elite" data-bio="Issu de la RTS Academy 2025, il est passé de la NL100 à la NL1000 en moins d&#x27;un an, puis jusqu&#x27;à la NL2000. Player of the Month de la RTS Academy.
+
+Il coache l&#x27;Academy face aux réguliers, et il sait exactement par où passent nos joueurs, parce qu&#x27;il y était il y a un an."><img src="img/equipe-alexandre.webp" alt=""><span class="plate"><b>Alexandre</b><small>Coach</small></span></button>
+        <button class="seat coach" data-name="Quentin" data-kind="coach" data-role="Coach" data-tags="Elite" data-bio="Joueur de cash game professionnel et mentor RTS, il rejoint l&#x27;équipe de coachs de la RTS Elite en 2027."><img src="img/equipe-quentin.webp" alt=""><span class="plate"><b>Quentin</b><small>Coach</small></span></button>
+        <button class="seat mentor" data-name="Anto" data-kind="mentor" data-role="Mentor" data-tags="Academy" data-bio="Issu de la RTS Academy 2024, il est passé de la NL100 à la NL1000 en moins d&#x27;un an. Il joue aujourd&#x27;hui dans la RTS Elite.
+
+Mentor : il accompagne un joueur de la RTS Academy tout au long de la saison, et l&#x27;aide à atteindre ce qu&#x27;il a lui-même déjà accompli."><img src="img/equipe-anthony.webp" alt=""><span class="plate"><b>Anto</b><small>Mentor</small></span></button>
+        <button class="seat mentor" data-name="Thibaud" data-kind="mentor" data-role="Mentor" data-tags="Academy" data-bio="Issu de la RTS Academy 2025, il est passé de la NL100 à la NL1000 en moins d&#x27;un an, puis jusqu&#x27;à la NL2000. Player of the Month de mars 2026, un mois record.
+
+Mentor : il accompagne un joueur de la RTS Academy tout au long de la saison, et l&#x27;aide à atteindre ce qu&#x27;il a lui-même déjà accompli."><img src="img/equipe-thibaud.webp" alt=""><span class="plate"><b>Thibaud</b><small>Mentor</small></span></button>
+        <button class="seat mentor" data-name="Matteo" data-kind="mentor" data-role="Mentor" data-tags="Academy" data-bio="Joueur RTS.
+
+Mentor : il accompagne un joueur de la RTS Academy tout au long de la saison, et l&#x27;aide à atteindre ce qu&#x27;il a lui-même déjà accompli."><img src="img/equipe-matteo.webp" alt=""><span class="plate"><b>Matteo</b><small>Mentor</small></span></button>
+        <button class="seat mentor" data-name="Martin" data-kind="mentor" data-role="Mentor" data-tags="Academy" data-bio="Joueur RTS.
+
+Mentor : il accompagne un joueur de la RTS Academy tout au long de la saison, et l&#x27;aide à atteindre ce qu&#x27;il a lui-même déjà accompli."><img src="img/equipe-martin.webp" alt=""><span class="plate"><b>Martin</b><small>Mentor</small></span></button>
+        <button class="seat staff" data-name="Mehdi" data-kind="staff" data-role="Responsable de la communauté" data-tags="Toute la team" data-bio="Il fait vivre la communauté RTS au quotidien : le Discord, les contenus et les événements."><img src="img/equipe-mehdi.webp" alt=""><span class="plate"><b>Mehdi</b><small>Staff</small></span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TÉMOIGNAGES : une grande citation à la fois ============
+     One <figure class="q"> per quote. Real quotes only. -->
+<section class="section quotes-section">
+  <div class="wrap">
+    <p class="eyebrow center">Ils en parlent</p>
+    <div class="quotes" id="quotes">
+      <figure class="q active"><blockquote>La pédagogie d'Alex, d'Enzo et d'Adrien est tout simplement incroyable. Ça a été un tournant à 180º dans ma manière d'aborder ce jeu qu'on aime tellement.</blockquote><figcaption><img src="img/avis-maxime.webp" alt=""><span><strong>Maxime</strong>Promotion RTS 2024</span></figcaption></figure>
+      <figure class="q"><blockquote>Pour moi, c'est l'un des meilleurs investissements pour débuter une carrière ambitieuse et viser des sommets.</blockquote><figcaption><img src="img/avis-kieran.webp" alt=""><span><strong>Kieran</strong>Promotion RTS 2024</span></figcaption></figure>
+      <figure class="q"><blockquote>J'ai plus appris et progressé en 1 an chez RTS qu'en plusieurs années seul.</blockquote><figcaption><img src="img/avis-arnaud.webp" alt=""><span><strong>Arnaud</strong>Promotion RTS 2024</span></figcaption></figure>
+      <figure class="q"><blockquote>Définitivement le move le plus EV+ pour booster votre carrière.</blockquote><figcaption><img src="img/avis-mathieu.webp" alt=""><span><strong>Mathieu</strong>Promotion RTS 2024</span></figcaption></figure>
+    </div>
+    <div class="q-dots" aria-label="Témoignages"></div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq">
+  <div class="wrap narrow">
+    <div class="head center">
+      <p class="eyebrow">Questions fréquentes</p>
+      <h2>FAQ</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Comment fonctionne le Coaching For Profit ?</summary><p>Vous ne payez pas votre coaching à l'avance : RTS se rémunère sur une partie de vos gains. Plus vous gagnez, plus nous gagnons. Un petit dépôt vous est tout de même demandé pour réserver votre place dans la fusée. Les conditions détaillées sont présentées lors de l'entretien.</p></details>
+      <details><summary>Combien de temps faut-il y consacrer ?</summary><p>Au moins 35 heures par semaine : jouer, étudier et participer aux coachings. Votre objectif de volume est fixé avec votre mentor.</p></details>
+      <details><summary>Et si je traverse un downswing ?</summary><p>Votre mentor suit vos résultats tout au long du mois et fait le bilan avec vous. Les coachs et le groupe sont là pendant les périodes difficiles : c'est l'un des grands avantages d'avancer en équipe.</p></details>
+      <details><summary>Faut-il habiter à un endroit précis ?</summary><p>Non. Coachings en visio et Discord : tout se passe en ligne. Seuls les séminaires sont en présentiel.</p></details>
+      <details><summary>Comment se passe la sélection ?</summary><p>En deux étapes. D'abord, vous remplissez le formulaire. Si votre profil nous intéresse, nous vous invitons à un entretien. Nous décidons ensuite si vous avez une place dans la fusée. Réponse fin novembre, début de la saison le 1er janvier 2027.</p></details>
+      <details><summary>Je monte vite de limites. Puis-je passer en Elite en cours d'année ?</summary><p>Oui. Les joueurs de l'Academy qui grimpent rapidement, notamment en atteignant la NL1000 (5/10), peuvent rejoindre la RTS Elite sans attendre la saison suivante. La décision revient au head coach, au manager de la RTS Academy et au manager de la RTS Elite.</p></details>
+      <details><summary>Je joue déjà la NL500 ou plus. Puis-je entrer directement en RTS Elite ?</summary><p>Nous ne recrutons pas activement pour la RTS Elite, mais il nous arrive d'ouvrir une place à un joueur prometteur. Contactez Alex directement sur Instagram : <a href="https://www.instagram.com/alexislahire/" target="_blank" rel="noopener">@alexislahire</a>.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CANDIDATER ============
+     All "Candidater" buttons point to the same 2027 form. -->
+<section class="section final" id="candidater">
+  <div class="wrap">
+    <div class="head center">
+      <p class="eyebrow">Recrutement 2027</p>
+      <h2>La fusée décolle<br>en janvier</h2>
+      <p class="lead">Candidatures ouvertes jusqu'au 22 novembre 2026.</p>
+    </div>
+    <div class="countdown center" data-countdown>
+      <div class="cd-grid">
+        <div><b data-d>00</b><span>jours</span></div>
+        <div><b data-h>00</b><span>heures</span></div>
+        <div><b data-m>00</b><span>min</span></div>
+        <div><b data-s>00</b><span>sec</span></div>
+      </div>
+    </div>
+    <div class="doors one">
+      <div class="door">
+        <p class="door-tag">Étage 1</p>
+        <h3>RTS Academy</h3>
+        <p class="door-for">Passer pro en une année.</p>
+        <ul><li>Vous jouez autour de la NL100</li><li>Vous voulez passer pro dans l'année</li><li>Vous pouvez être à plein temps sur votre projet poker</li></ul>
+        <a class="btn btn-red btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSdi-liDOeG-fbzL3Q2zw-ZECX8f2LAzHsfqDfq1anlPmFw1uQ/viewform" target="_blank" rel="noopener">Candidater à la RTS Academy</a>
+      </div>
+    </div>
+    <div class="elite-contact">
+      <p><strong>Vous visez la RTS Elite ?</strong> Contactez Alex directement sur Instagram.</p>
+      <a class="btn btn-ghost-red" href="https://www.instagram.com/alexislahire/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg>Contacter Alex sur Instagram</a>
+    </div>
+    <div class="apply-steps three">
+      <div><span>1</span><strong>Le formulaire</strong><p>Votre parcours, vos résultats, vos objectifs.</p></div>
+      <div><span>2</span><strong>L'entretien</strong><p>Si votre profil nous intéresse, nous vous invitons à un entretien.</p></div>
+      <div><span>3</span><strong>Votre place dans la fusée</strong><p>Réponse fin novembre. Décollage le 1er janvier 2027.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <img src="img/logo.svg" alt="RTS">
+    <span>© 2022-2026 RTS Holdem. Tous droits réservés.</span>
+  </div>
+</footer>
+
+<!-- The room (filled from the templates above) -->
+<div class="scrim" data-close></div>
+<div class="room" role="dialog" aria-modal="true" aria-label="Compartiment de la fusée">
+  <button class="room-close" data-close aria-label="Fermer">×</button>
+  <div class="room-photo"></div>
+  <div class="room-body"></div>
+  <div class="room-nav">
+    <button class="arrow" data-room-step="-1" aria-label="Compartiment précédent">←</button>
+    <span class="room-count"></span>
+    <button class="arrow" data-room-step="1" aria-label="Compartiment suivant">→</button>
+  </div>
+</div>
+
+<script src="main.js?v=2026-10-22e"></script>
+</body>
+</html>

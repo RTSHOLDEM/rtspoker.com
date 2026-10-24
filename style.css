@@ -558,3 +558,18 @@ body.room-open .room { opacity: 1; pointer-events: auto; transform: translate(-5
 .act:nth-child(2)::after, .act:nth-child(3)::after { color: rgba(253,6,6,.14); }
 .footer .suits { letter-spacing: .4em; margin-right: -.4em; color: rgba(255,255,255,.5); }
 .footer .suits i { font-style: normal; color: var(--red); }
+
+/* "Click a photo" cues (Alexis, 2026-10-24): pulsing + badge on every staff photo, hint pill above the table */
+.tap-hint { display: inline-flex; align-items: center; gap: 10px; margin: 22px auto 0; padding: 10px 18px; border: 1px solid rgba(253,6,6,.45); border-radius: 999px; background: var(--red-soft); color: #fff; font: 500 14px/1.2 var(--body); }
+.tap-hint svg { width: 20px; height: 20px; flex: none; fill: none; stroke: var(--red); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; animation: tapNudge 1.6s ease-in-out infinite; }
+@keyframes tapNudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+.seat::after, .r-faces .face::after { content: "+"; position: absolute; top: 6px; right: 6px; width: 22px; height: 22px; border-radius: 50%; background: var(--red); color: #fff; font: 600 17px/22px var(--body); text-align: center; pointer-events: none; animation: seatPing 2.6s ease-out infinite; }
+.r-faces .face { position: relative; }
+.r-faces .face::after { top: -4px; right: -4px; }
+.seat:nth-of-type(2)::after { animation-delay: .25s; } .seat:nth-of-type(3)::after { animation-delay: .5s; } .seat:nth-of-type(4)::after { animation-delay: .75s; }
+.seat:nth-of-type(5)::after { animation-delay: 1s; } .seat:nth-of-type(6)::after { animation-delay: 1.25s; } .seat:nth-of-type(7)::after { animation-delay: 1.5s; }
+.seat:nth-of-type(8)::after { animation-delay: 1.75s; } .seat:nth-of-type(9)::after { animation-delay: 2s; } .seat:nth-of-type(10)::after { animation-delay: 2.25s; }
+@keyframes seatPing { 0% { box-shadow: 0 0 0 0 rgba(253,6,6,.6); } 70% { box-shadow: 0 0 0 9px rgba(253,6,6,0); } 100% { box-shadow: 0 0 0 0 rgba(253,6,6,0); } }
+.seat:hover::after, .r-faces .face:hover::after { transform: scale(1.15); }
+@media (max-width: 760px) { .seat::after { width: 17px; height: 17px; font-size: 13px; line-height: 17px; top: 4px; right: 4px; } .tap-hint { font-size: 13px; } }
+@media (prefers-reduced-motion: reduce) { .seat::after, .r-faces .face::after, .tap-hint svg { animation: none; } }

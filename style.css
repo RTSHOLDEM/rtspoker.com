@@ -223,7 +223,7 @@ body.room-open .room { opacity: 1; pointer-events: auto; transform: translate(-5
 .jump strong { font: 500 34px/1 var(--body); letter-spacing: -.02em; }
 .gbox { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: #0a0a0c; border: 1px solid var(--line); }
 .g { position: absolute; inset: 0; display: grid; place-items: center; transition: opacity .25s; }
-.g img { width: 100%; height: 100%; object-fit: contain; background: #fff; }
+.g img { width: 100%; height: 100%; object-fit: contain; background: transparent; }
 .g.empty { color: #55555c; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; background: repeating-linear-gradient(135deg, transparent 0 12px, #ffffff05 12px 13px), #0a0a0c; }
 .g.after { opacity: 0; }
 .res.show-after .g.before { opacity: 0; }

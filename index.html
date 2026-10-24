@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2026-10-22j">
+  <link rel="stylesheet" href="style.css?v=2026-10-24a">
 </head>
 <body>
 
@@ -237,48 +237,31 @@
 </section>
 
 <!-- ============ RÉSULTATS : un joueur à la fois, l'avant puis l'après ============
-     One <article class="slide"> per player (Gerbert, Thibaud, Faycal, Abraham). Graphs: img/resultat-N-avant.webp and img/resultat-N-apres.webp.
+     One <article class="slide"> per player, anonymous (no names anywhere here). Graphs: img/resultat-N-avant.webp and img/resultat-N-apres.webp.
      Slide with class "pending" = curves not received yet (hides the lightning button). Testimonial: <blockquote class="res-quote">, real quote only. -->
 <section class="section" id="resultats">
   <div class="wrap">
     <div class="head center">
       <p class="eyebrow"><span class="suit" aria-hidden="true">♣︎</span>Résultats</p>
       <h2>Avant RTS. Après RTS.</h2>
-      <p class="lead">Quatre trajectoires parmi beaucoup d'autres. Les courbes sont en cours de mise à jour : elles arrivent très bientôt.</p>
+      <p class="lead">Quelques-uns de nos joueurs, avant et après RTS.</p>
     </div>
 
     <div class="res" id="res">
-      <article class="slide pending active">
-        <header><div><h3>Gerbert</h3><p class="res-tag">Promotion 2025</p></div><p class="jump"><span>NL100</span><i>→</i><strong>NL2000</strong></p></header>
+      <article class="slide active">
+        <header><div><h3>Joueur RTS</h3><p class="res-tag">Promotion 2025</p></div><p class="jump"><span>NL100</span><i>→</i><strong>NL2000</strong></p></header>
         <div class="gbox">
-          <div class="g before empty"><span>Courbe en cours de mise à jour</span></div>
-          <div class="g after empty"><span>Courbe en cours de mise à jour</span></div>
+          <div class="g before"><img src="img/resultat-2-avant.webp" alt="Courbe de gains avant RTS" loading="lazy"></div>
+          <div class="g after"><img src="img/resultat-2-apres.webp" alt="Courbe de gains après RTS" loading="lazy"></div>
         </div>
-        <blockquote class="res-quote empty">Témoignage à venir</blockquote>
       </article>
-      <article class="slide pending">
-        <header><div><h3>Thibaud</h3><p class="res-tag">Promotion 2025</p></div><p class="jump"><span>NL100</span><i>→</i><strong>NL2000</strong></p></header>
+      <article class="slide">
+        <header><div><h3>Joueur RTS Academy</h3><p class="res-tag">Promotion 2026</p></div><p class="jump"><span>NL50/100</span><i>→</i><strong>NL1000</strong></p></header>
         <div class="gbox">
-          <div class="g before empty"><span>Courbe en cours de mise à jour</span></div>
-          <div class="g after empty"><span>Courbe en cours de mise à jour</span></div>
+          <div class="g before"><img src="img/resultat-4-avant.webp" alt="Courbe de gains avant RTS" loading="lazy"></div>
+          <div class="g after"><img src="img/resultat-4-apres.webp" alt="Courbe de gains après RTS" loading="lazy"></div>
         </div>
-        <blockquote class="res-quote empty">Témoignage à venir</blockquote>
-      </article>
-      <article class="slide pending">
-        <header><div><h3>Faycal</h3><p class="res-tag">Promotion 2026</p></div></header>
-        <div class="gbox">
-          <div class="g before empty"><span>Courbe en cours de mise à jour</span></div>
-          <div class="g after empty"><span>Courbe en cours de mise à jour</span></div>
-        </div>
-        <blockquote class="res-quote empty">Témoignage à venir</blockquote>
-      </article>
-      <article class="slide pending">
-        <header><div><h3>Abraham</h3><p class="res-tag">Promotion 2026</p></div><p class="jump"><span>NL100</span><i>→</i><strong>NL1000</strong></p></header>
-        <div class="gbox">
-          <div class="g before empty"><span>Courbe en cours de mise à jour</span></div>
-          <div class="g after empty"><span>Courbe en cours de mise à jour</span></div>
-        </div>
-        <blockquote class="res-quote empty">Témoignage à venir</blockquote>
+        <blockquote class="res-quote">« Je fais partie de la promotion RTS Academy saison 2026, que j'ai rejointe en étant joueur de NL50/100. Grâce à la qualité des coachings et à un mentor qui a su bien m'encadrer, le staff RTS m'a permis d'aller m'installer sur les limites de la NL400 jusqu'à la NL1000. L'esprit d'équipe et la bonne ambiance au sein de la team, dus au séminaire, sont aussi une des raisons qui ont rendu cette expérience incroyable. Une seule direction : To the Sky ! »</blockquote>
       </article>
 
       <!-- shared controls: main.js moves them into the visible graph -->
@@ -291,7 +274,7 @@
     </div>
     <div class="res-nav">
       <button class="arrow" data-step="-1" aria-label="Joueur précédent">←</button>
-      <span class="res-count"><b>1</b> / 4</span>
+      <span class="res-count"><b>1</b> / 2</span>
       <button class="arrow" data-step="1" aria-label="Joueur suivant">→</button>
     </div>
     <p class="res-more">Et bien d'autres. Nous n'en montrons que quelques-uns.</p>
@@ -448,6 +431,6 @@ Mentor : il accompagne un joueur de la RTS Academy tout au long de la saison, et
   </div>
 </div>
 
-<script src="main.js?v=2026-10-22j"></script>
+<script src="main.js?v=2026-10-24a"></script>
 </body>
 </html>

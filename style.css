@@ -227,7 +227,7 @@ body.room-open .room { opacity: 1; pointer-events: auto; transform: translate(-5
 .gbox { position: relative; aspect-ratio: 1890 / 845; border-radius: 12px; overflow: hidden; background: #0a0a0c; border: 1px solid var(--line); }
 .gbox.tall { aspect-ratio: 1600 / 880; background: #0d0d0f; } /* AD: old story curves, darkened + widened (Alexis, 2026-10-24) */
 .g { position: absolute; inset: 0; display: grid; place-items: center; transition: opacity .25s; }
-.g img { width: 100%; height: 100%; object-fit: contain; background: transparent; }
+.g img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: transparent; } /* absolute: a grid row would let tall graphs overflow and cut the axis (2026-10-24) */
 .g.empty { color: #55555c; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; background: repeating-linear-gradient(135deg, transparent 0 12px, #ffffff05 12px 13px), #0a0a0c; }
 .g.after { opacity: 0; }
 .res.show-after .g.before { opacity: 0; }
@@ -573,3 +573,9 @@ body.room-open .room { opacity: 1; pointer-events: auto; transform: translate(-5
 .seat:hover::after, .r-faces .face:hover::after { transform: scale(1.15); }
 @media (max-width: 760px) { .seat::after { width: 17px; height: 17px; font-size: 13px; line-height: 17px; top: 4px; right: 4px; } .tap-hint { font-size: 13px; } }
 @media (prefers-reduced-motion: reduce) { .seat::after, .r-faces .face::after, .tap-hint svg { animation: none; } }
+
+/* Reveal button sits UNDER the graph so it never hides the hands axis (Alexis, 2026-10-24) */
+.gbox { overflow: visible; margin-bottom: 70px; }
+.g { border-radius: 12px; overflow: hidden; }
+.reveal { bottom: -60px; }
+@media (max-width: 760px) { .gbox { margin-bottom: 62px; } .reveal { bottom: -54px; } }

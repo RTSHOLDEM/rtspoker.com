@@ -212,7 +212,7 @@ body.room-open .room { opacity: 1; pointer-events: auto; transform: translate(-5
 .elite-season p { color: var(--muted); font-size: 15px; }
 
 /* ============ Results: one player at a time, lightning reveal ============ */
-.res { position: relative; --rw: min(1600px, 100vw - 32px); width: var(--rw); margin: 0 calc((100% - var(--rw)) / 2); border: 1px solid var(--line-2); border-radius: 20px; background: linear-gradient(180deg, var(--surface), var(--bg)); padding: 20px; overflow: hidden; }
+.res { position: relative; --rw: min(1280px, 100vw - 32px); width: var(--rw); margin: 0 calc((100% - var(--rw)) / 2); border: 1px solid var(--line-2); border-radius: 20px; background: linear-gradient(180deg, var(--surface), var(--bg)); padding: 20px; overflow: hidden; }
 .slide { display: none; }
 .slide.active { display: block; }
 .slide header { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 20px; }

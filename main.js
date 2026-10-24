@@ -90,8 +90,9 @@ function showBio(el, backId) {
   const tags = (d.tags || '').split(',').filter(Boolean).map(t => `<span>${t}</span>`).join('');
   const name = el.querySelector('.plate b') ? el.querySelector('.plate b').innerHTML : (d.name || d.person);
   const paras = (d.bio || '').split(/\n\s*\n/).map(t => `<p>${t}</p>`).join('');
+  const video = d.video ? `<a class="r-video" href="${d.video}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>${d.videoLabel || 'Voir son interview'}</a>` : '';
   const back = backId ? `<button class="r-back" data-room="${backId}">← Retour</button>` : '';
-  roomBody.innerHTML = `<p class="r-tag">La team RTS · ${KIND[d.kind] || ''}</p><h3 class="r-title">${name}</h3><p class="r-role">${d.role}</p><div class="r-chips">${tags}</div><div class="r-bio">${paras}</div>${back}`;
+  roomBody.innerHTML = `<p class="r-tag">La team RTS · ${KIND[d.kind] || ''}</p><h3 class="r-title">${name}</h3><p class="r-role">${d.role}</p><div class="r-chips">${tags}</div><div class="r-bio">${paras}</div>${video}${back}`;
   room.classList.add('bio');
   room.scrollTop = 0;
   document.body.classList.add('room-open', 'locked');

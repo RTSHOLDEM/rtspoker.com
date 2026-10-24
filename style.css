@@ -15,6 +15,9 @@
   --red: #fd0606;
   --red-dark: #c40404;
   --red-soft: rgba(253, 6, 6, .1);
+  --gold: #d9b45a;
+  --gold-light: #f3dc9a;
+  --gold-dark: #a8812f;
   --radius: 16px;
   --max: 1180px;
   --head: "Fivo", "Inter", system-ui, sans-serif;
@@ -344,10 +347,23 @@ body.room-open .room { opacity: 1; pointer-events: auto; transform: translate(-5
 .partners img { height: 30px; width: auto; filter: grayscale(1) brightness(1.6); opacity: .55; transition: opacity .3s; }
 .partners a:hover img { opacity: 1; }
 .footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--muted); font-size: 13px; }
-.footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.footer .wrap { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 12px; text-align: center; }
 .footer img { height: 18px; width: auto; opacity: .7; }
 
 /* ============ Upright rocket (tablet + phone) ============ */
+/* RTS Elite stage: premium gold (Alexis, 2026-10-24) */
+.stage.elite { position: relative; background: radial-gradient(120% 90% at 70% 0%, rgba(217,180,90,.13), transparent 60%), linear-gradient(180deg, rgba(217,180,90,.05), transparent 70%); box-shadow: inset 0 1px 0 rgba(243,220,154,.35); }
+.stage.elite::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--gold-light), var(--gold), transparent); pointer-events: none; }
+.stage.elite .stage-h span { color: var(--gold); }
+.stage.elite .stage-h strong { background: linear-gradient(180deg, var(--gold-light) 10%, var(--gold) 55%, var(--gold-dark)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.stage.elite .stage-h:hover strong { filter: brightness(1.15); }
+.stage.elite .stage-h i { color: var(--gold); }
+.stage.elite .tile { border-color: rgba(217,180,90,.32); background: linear-gradient(160deg, rgba(217,180,90,.09), rgba(20,20,23,.75) 55%); }
+.stage.elite .tile svg { stroke: var(--gold); }
+.stage.elite .tile i { color: rgba(217,180,90,.7); }
+.stage.elite .tile:hover, .stage.elite .tile:focus-visible { border-color: var(--gold); background: linear-gradient(160deg, rgba(217,180,90,.2), rgba(20,20,23,.75) 60%); box-shadow: 0 0 22px rgba(217,180,90,.18); }
+.stage.elite .tile:hover i { color: var(--gold); }
+
 @media (max-width: 1300px) {
   .ship { display: flex; flex-direction: column-reverse; align-items: center; width: min(560px, 100% - 32px); margin: 0 auto; transform: none; }
   .engine, .nose { height: auto; width: 100%; }
@@ -539,5 +555,5 @@ body.room-open .room { opacity: 1; pointer-events: auto; transform: translate(-5
 .act { position: relative; }
 .act::after { content: attr(data-suit); position: absolute; top: 14px; right: 0; font-size: 44px; line-height: 1; color: rgba(255,255,255,.06); pointer-events: none; font-family: "Apple Symbols", "Segoe UI Symbol", sans-serif; }
 .act:nth-child(2)::after, .act:nth-child(3)::after { color: rgba(253,6,6,.14); }
-.footer .suits { letter-spacing: .4em; color: rgba(255,255,255,.5); }
+.footer .suits { letter-spacing: .4em; margin-right: -.4em; color: rgba(255,255,255,.5); }
 .footer .suits i { font-style: normal; color: var(--red); }

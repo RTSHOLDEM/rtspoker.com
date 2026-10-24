@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2026-10-24e">
+  <link rel="stylesheet" href="style.css?v=2026-10-24f">
 </head>
 <body>
 
@@ -91,6 +91,7 @@
           <button class="stage-h" data-room="elite"><span>Étage 2</span><strong>RTS Elite</strong><small>Les joueurs déjà pro</small><i>+</i></button>
           <div class="tiles">
             <button class="tile" data-room="e-coaching"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".8"/></svg><b>Coaching</b><i>+</i></button>
+            <button class="tile" data-room="e-ia"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg><b>L'IA</b><i>+</i></button>
             <button class="tile" data-room="e-transmettre"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg><b>Transmettre</b><i>+</i></button>
             <button class="tile" data-room="e-image"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><circle cx="12" cy="13.5" r="3.5"/><path d="M9 7l1.5-3h3L15 7"/></svg><b>Votre image</b><i>+</i></button>
             <button class="tile" data-room="e-wealth"><svg viewBox="0 0 24 24"><path d="M3 20h18M5 16l5-5 4 3 6-7"/><path d="M15 7h5v5"/></svg><b>RTS Wealth</b><i>+</i></button>
@@ -176,6 +177,11 @@
   <p>Des coachings chaque semaine avec des coachs plus expérimentés, joueurs des plus grosses limites.</p>
   <p class="r-hint">Cliquez sur un coach pour découvrir son parcours.</p>
   <div class="r-faces"><button class="face" data-person="Alex"><img src="img/equipe-alex.webp?v=2" alt=""><span>Alex</span></button><button class="face" data-person="Adrien"><img src="img/equipe-adrien.webp?v=2" alt=""><span>Adrien</span></button><button class="face" data-person="Quentin"><img src="img/equipe-quentin.webp" alt=""><span>Quentin</span></button><button class="face" data-person="Alexandre"><img src="img/equipe-alexandre.webp?v=2" alt=""><span>Alexandre</span></button></div>
+</template>
+<template class="room-tpl" data-id="e-ia" data-img="img/fusee/e-ia.webp">
+  <p class="r-tag">RTS Elite · IA</p>
+  <h3 class="r-title">Des joueurs de poker next gen</h3>
+  <p>Nous vous apprenons à utiliser l'IA au quotidien pour faire de vous des joueurs de poker next gen : analyser votre jeu, retravailler vos coachings, préparer vos sessions et organiser votre étude. Un avantage que très peu de joueurs ont aujourd'hui.</p>
 </template>
 <template class="room-tpl" data-id="e-transmettre" data-img="img/fusee/e-transmettre.webp">
   <p class="r-tag">RTS Elite · Transmettre</p>

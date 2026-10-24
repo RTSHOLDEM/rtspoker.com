@@ -447,7 +447,9 @@ body.room-open .room { opacity: 1; pointer-events: auto; transform: translate(-5
 .academy .tiles { grid-template-columns: repeat(6, minmax(0, 1fr)); }
 .academy .tile { grid-column: span 2; }
 .academy .tile:nth-child(4) { grid-column: 2 / span 2; }
-.elite .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.elite .tiles { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.elite .tile { grid-column: span 2; }
+.elite .tile:nth-child(4) { grid-column: 2 / span 2; }
 .tile:not(.bridge) { container-type: inline-size; align-items: center; justify-content: center; text-align: center; gap: 10px; padding: 12px 8px; }
 .tile:not(.bridge) svg { margin: 0; }
 .tile b { font-size: clamp(12px, 10cqi, 16px); line-height: 1.2; max-width: 100%; overflow-wrap: normal; }
@@ -504,7 +506,7 @@ body.room-open .room { opacity: 1; pointer-events: auto; transform: translate(-5
   .stage-h small { display: block; }
   .stage-h i { display: none; }
   .academy .tiles, .elite .tiles { grid-template-columns: 1fr; grid-template-rows: none; }
-  .academy .tile, .academy .tile:nth-child(4) { grid-column: auto; }
+  .academy .tile, .academy .tile:nth-child(4), .elite .tile, .elite .tile:nth-child(4) { grid-column: auto; }
   .tile:not(.bridge) { flex-direction: row; justify-content: flex-start; text-align: left; gap: 12px; padding: 13px 14px; }
   .tile b { flex: 1; font-size: 15px; }
   .tile.bridge { flex-direction: row; justify-content: center; padding: 14px; }

@@ -579,3 +579,5 @@ body.room-open .room { opacity: 1; pointer-events: auto; transform: translate(-5
 .g { border-radius: 12px; overflow: hidden; }
 .reveal { bottom: -60px; }
 @media (max-width: 760px) { .gbox { margin-bottom: 62px; } .reveal { bottom: -54px; } }
+
+.jump-note { font: italic 400 17px/1 var(--serif); color: var(--muted); margin-left: 6px; }

@@ -186,9 +186,10 @@ quotes.forEach((q, k) => {
   b.addEventListener('click', () => { show(k); start(); });
   dots.append(b);
 });
-function start() { clearInterval(timer); timer = setInterval(() => show(qi + 1), 7000); }
+// Long quotes stay twice as long on screen
+function start() { clearTimeout(timer); timer = setTimeout(() => { show(qi + 1); start(); }, quotes[qi].classList.contains('long') ? 14000 : 7000); }
 const qbox = document.getElementById('quotes');
-qbox.addEventListener('mouseenter', () => clearInterval(timer));
+qbox.addEventListener('mouseenter', () => clearTimeout(timer));
 qbox.addEventListener('mouseleave', start);
 show(0);
 start();

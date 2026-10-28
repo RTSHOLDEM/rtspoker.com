@@ -306,6 +306,7 @@ body.room-open .room { opacity: 1; pointer-events: auto; transform: translate(-5
 .q blockquote { margin: 0; font: 400 clamp(28px, 3.8vw, 48px)/1.18 var(--serif); }
 .q blockquote::before { content: "«\00a0"; color: var(--red); }
 .q blockquote::after { content: "\00a0»"; color: var(--red); }
+.q.long blockquote { font-size: clamp(21px, 2.4vw, 31px); line-height: 1.3; }
 .q figcaption { display: inline-flex; align-items: center; gap: 14px; margin-top: 36px; text-align: left; }
 .q figcaption img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
 .q figcaption span { font-size: 13px; color: var(--muted); }

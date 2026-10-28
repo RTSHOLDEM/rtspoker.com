@@ -582,3 +582,9 @@ body.room-open .room { opacity: 1; pointer-events: auto; transform: translate(-5
 @media (max-width: 760px) { .gbox { margin-bottom: 62px; } .reveal { bottom: -54px; } }
 
 .jump-note { font: italic 400 17px/1 var(--serif); color: var(--muted); margin-left: 6px; }
+
+/* hero promise + CTA above the rocket */
+.hero-sub2 { max-width: 560px; margin: 10px auto 0; color: var(--muted); font-size: 16px; line-height: 1.5; }
+.hero-cta { margin-top: 28px; }
+.hero-cta .hero-dl { margin: 12px 0 0; font-size: 13px; color: var(--muted); }
+.hero-cta .facts { margin-top: 28px; }
